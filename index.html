@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Push Express - сервис браузерных уведомлений</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="loader">
+    <img src="img/logo.png" alt="">
+</div>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__in">
+            <div class="header__navbar">
+                <div class="header__logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
+                <i class="fa fa-bars nav__toggle-button menu-toggle" aria-hidden="true"></i>
+                <nav class="nav nav-mobile menu">
+                    <div class="nav__in mobile-menu">
+                    <i class="close-menu icon-close-black"></i>
+
+                    <div class="nav__mobile-links">
+                        <a href="#first-section" class="nav__link" data-menuanchor="about">К началу</a>
+                        <a href="#second-section" class="nav__link" data-menuanchor="services">Возможности</a>
+                        <a href="#third-section" class="nav__link" data-menuanchor="about">Для чего и зачем</a>
+                        <a href="#fourth-section" class="nav__link" data-menuanchor="services">Партнерам</a>
+                        <a href="#fifth-section" class="nav__link" data-menuanchor="about">Тарифы</a>
+                        <a href="#sixth-section" class="nav__link" data-menuanchor="services">Контакт</a>
+                    </div>
+                    <div class="nav__mobile-links nav__mobile-links_footer">
+                        <a href="/about" class="nav__link">О проекте</a>
+                        <a href="/terms" class="nav__link">Пользовательское соглашение</a>
+                    </div>
+                    <div class="footer__share footer__share_nav">
+                        <a class="footer__share-link" href="">
+                            <i class="fa fa-facebook-official"></i>
+                        </a>
+                        <a class="footer__share-link" href="">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="footer__share-link" href="">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+                </nav>
+                <div class="nav nav-desktop">
+                    <div class="nav__in mobile-menu">
+                        <i class="close-menu icon-close-black"></i> <i class="close-menu icon-close-black"></i>
+                        <a href="https://my.push.express" target="_blank" class="nav__link" data-menuanchor="about">Клиентам</a>
+                        <a href="https://partner.push.express" target="_blank" class="nav__link" data-menuanchor="services">Партнерам</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main class="main">
+        <ul class="side-nav" id="side-menu">
+            <li class="side-nav__item active">
+                <a href="#first-section" class="side-nav__link">К началу</a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#second-section" class="side-nav__link">Возможности</a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#third-section" class="side-nav__link">Для чего и зачем?</a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#fourth-section" class="side-nav__link">Партнерам</a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#fifth-section" class="side-nav__link">Тарифы</a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#sixth-section" class="side-nav__link">Контакт</a>
+            </li>
+        </ul>
+        <div class="section-block">
+            <div class="section section-first active" id="first-section">
+                <div class="section__content">
+                    <h1 class="section__title">
+                        Начни продвижение<br/>
+                        бизнеса прямо сейчас
+                    </h1>
+                    <p class="section__description">
+                        Браузерные уведомления самый эффективный и легкий способ вернуть пользователей и клиентов на Ваш сайт
+                    </p>
+                    <a href="https://my.push.express/login/registration" target="_blank">
+                        <button class="button button_section">
+                            <span class="button__span">Попробовать сейчас</span>
+                        </button>
+                    </a>
+                    <i class="section-first__icon"></i>
+                </div>
+            </div>
+            <div class="section section-second" id="second-section">
+                <h2 class="section__title section__title_big section__title_centered">
+                    Простая интеграция,<br>
+                    впечатляющие возможности
+                </h2>
+                <div class="section__info">
+                    <div class="section__info-block">
+                        <i class="icon-5"></i>
+                        <h5 class="section__info-block-title">Интеграция</h5>
+                        <p class="section__info-block-description">Простая установка на Вашем сайте, без подключениия сторонних решений</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-4"></i>
+                        <h5 class="section__info-block-title">Браузеры</h5>
+                        <p class="section__info-block-description">Сервис поддерживается большинством Интернет-браузеров</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-1"></i>
+                        <h5 class="section__info-block-title">Статистика</h5>
+                        <p class="section__info-block-description">Развернутая статистика пользователей, созданных кампаний и проектов</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-3"></i>
+                        <h5 class="section__info-block-title">Расписание</h5>
+                        <p class="section__info-block-description">Удобное и гибкое планироваение рассылок</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-2"></i>
+                        <h5 class="section__info-block-title">API</h5>
+                        <p class="section__info-block-description">Прямой доступ к сервису посредством API запросов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-third" id="third-section">
+                <h2 class="section__title section__title_big">Для чего и зачем?<br>
+                </h2>
+                <div class="section__info section__info_fourth">
+                    <div class="section__info-block">
+                        <i class="icon-6"></i>
+                        <h5 class="section__info-block-title">Интернет-магазины</h5>
+                        <p class="section__info-block-description">Возврат покупателей<br/>Уведомления о скидках<br/>Уведомления о распродажах<br/></p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-7"></i>
+                        <h5 class="section__info-block-title">Корпоративные сайты и сервисы</h5>
+                        <p class="section__info-block-description">Оповещение пользователей и клиентов о новых услугах</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-8"></i>
+                        <h5 class="section__info-block-title">Монетизация</h5>
+                        <p class="section__info-block-description">Монетизируйте Ваш трафик через нашу партнерскую программу</p>
+                    </div>
+                    <div class="section__info-block">
+                        <i class="icon-9"></i>
+                        <h5 class="section__info-block-title">Блоги и сообщества</h5>
+                        <p class="section__info-block-description">Быстрое уведомление подписчиков<br/>о последних новостях и событиях</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-fourth active" id="fourth-section">
+                <div class="section__content">
+                    <h1 class="section__title">
+                        Эффективный инструмент<br>
+                        маркетинга и продвижения
+                    </h1>
+                    <p class="section__description section__description_sm">
+                        Большая база собственных подписчиков
+                        по широкому кругу интересов и тематик
+                        позволит максимально быстро и эффективно
+                        провести рекламную компанию ваших товаров
+                        и услуг. Зарегистрируйтесь в качестве партнера
+                        и начните продвижение уже сегодня!
+                    </p>
+                    <a href="https://my.push.express/login/registration" target="_blank">
+                        <button class="button button_section">
+                            <span class="button__span">Зарегистрироватся</span>
+                        </button>
+                    </a>
+                    <i class="section-second__icon"></i>
+                </div>
+            </div>
+            <div class="section section-fifth" id="fifth-section">
+                <div class="section__content">
+                    <h2 class="section__title section__title_big">
+                        Тарифные планы
+                    </h2>
+                    <div class="price-table">
+                        <div class="price-table__row price-table__row_borderless">
+                            <div class="price-table__column price-table__column_title price-table__column_main-title">
+
+                            </div>
+                            <div class="price-table__column price-table__column_main-title">
+                                <span class="price-table__title-bold ">Старт</span>
+                            </div>
+                            <div class="price-table__column price-table__column_main-title">
+                                <span class="price-table__title-bold">Смарт</span>
+                            </div>
+                            <div class="price-table__column price-table__column_main-title price-table__column_active">
+                                <span class="price-table__title-bold">Оптима</span>
+                            </div>
+                            <div class="price-table__column price-table__column_main-title">
+                                <span class="price-table__title-bold">Flexible</span>
+                            </div>
+                        </div>
+                        <div class="price-table__row">
+                            <div class="price-table__column price-table__column_title">
+                                <span class="price-table__title-main">Рекламные уведомления</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Да</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Нет</span>
+                            </div>
+                            <div class="price-table__column price-table__column_active">
+                                <span class="price-table__title">Нет</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Нет</span>
+                            </div>
+                        </div>
+                        <div class="price-table__row">
+                            <div class="price-table__column price-table__column_title">
+                                <span class="price-table__title-main">Количество проектов</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">1</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Неограничено</span>
+                            </div>
+                            <div class="price-table__column price-table__column_active">
+                                <span class="price-table__title">Неограничено</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Неограничено</span>
+                            </div>
+                        </div>
+                        <div class="price-table__row">
+                            <div class="price-table__column price-table__column_title">
+                                <span class="price-table__title-main">Количество уведомлений <br/>(в месяц)</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">5000</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">10000</span>
+                            </div>
+                            <div class="price-table__column price-table__column_active">
+                                <span class="price-table__title">50000</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Неограничено</span>
+                            </div>
+                        </div>
+                        <div class="price-table__row">
+                            <div class="price-table__column price-table__column_title">
+                                <span class="price-table__title-main">Доступ API</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Нет</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Да</span>
+                            </div>
+                            <div class="price-table__column price-table__column_active">
+                                <span class="price-table__title">Да</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title">Да</span>
+                            </div>
+                        </div>
+                        <div class="price-table__row price-table__row_price price-table__row_borderless">
+                            <div class="price-table__column price-table__column_title">
+                                <span class="price-table__title-main">Стоимость</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title-bold">0</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title-bold">1500 руб.</span>
+                            </div>
+                            <div class="price-table__column price-table__column_active">
+                                <span class="price-table__title-bold">4000 руб.</span>
+                            </div>
+                            <div class="price-table__column">
+                                <span class="price-table__title-bold">5 <small>копеек</small></span><br>
+                                <small class="price-table__title-sm">за уведомление</small>
+                            </div>
+                        </div>
+                        <div class="price-table__row price-table__row_buttons price-table__row_borderless">
+                            <div class="price-table__column price-table__column_title">
+
+                            </div>
+                            <div class="price-table__column">
+                                <a href="https://my.push.express/login/registration" target="_blank">
+                                <button class="price-table__button button"><span class="button__span">Попробовать</span>
+                                </button>
+                                </a>
+                            </div>
+                            <div class="price-table__column">
+                                <a href="https://my.push.express/login/registration" target="_blank">
+                                <button class="price-table__button button"><span class="button__span">Попробовать</span>
+                                </button>
+                                </a>
+                            </div>
+                            <div class="price-table__column price-table__column_active price-table__column_active_price">
+                                <a href="https://my.push.express/login/registration" target="_blank">
+                                <button class="price-table__button button"><span class="button__span">Попробовать</span>
+                                </button>
+                                </a>
+                            </div>
+                            <div class="price-table__column">
+                                <a href="https://my.push.express/login/registration" target="_blank">
+                                <button class="price-table__button button"><span class="button__span">Попробовать</span>
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="price-list bxslider hide">
+                        <div class="price-list__item price-list__item_active">
+                            <div class="price-list__item-in">
+                                <div class="price-list__item-row">
+                                    <div class="price-list__item-main-title">Старт</div>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Рекламные уведомления</span>
+                                    <span class="price-list__item-value">Да</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество проектов</span>
+                                    <span class="price-list__item-value">1</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество уведомлений<br>(в месяц)</span>
+                                    <span class="price-list__item-value">5000</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Доступ к API</span>
+                                    <span class="price-list__item-value">Нет</span>
+                                </div>
+                                <div class="price-list__item-row price-list__item-row_price">
+                                    <span class=price-list__item-price>Стоимость</span>
+                                    <span class="price-list__item-value price-list__item-value_price">Бесплатно</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <a href="https://my.push.express/login/registration" target="_blank">
+                                    <button class="price-list__button button"><span
+                                            class="button__span">Попробовать</span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-list__item">
+                            <div class="price-list__item-in">
+                                <div class="price-list__item-row">
+                                    <div class="price-list__item-main-title">Смарт</div>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Рекламные уведомления</span>
+                                    <span class="price-list__item-value">Нет</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество проектов</span>
+                                    <span class="price-list__item-value">Неограничено</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество уведомлений<br>(в месяц)</span>
+                                    <span class="price-list__item-value">10000</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Доступ к API</span>
+                                    <span class="price-list__item-value">Да</span>
+                                </div>
+                                <div class="price-list__item-row price-list__item-row_price">
+                                    <span class=price-list__item-price>Стоимость</span>
+                                    <span class="price-list__item-value price-list__item-value_price">1500 руб.</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <a href="https://my.push.express/login/registration" target="_blank">
+                                    <button class="price-list__button button"><span
+                                            class="button__span">Попробовать</span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-list__item">
+                            <div class="price-list__item-in">
+                                <div class="price-list__item-row">
+                                    <div class="price-list__item-main-title">Оптима</div>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Рекламные уведомления</span>
+                                    <span class="price-list__item-value">Нет</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество проектов</span>
+                                    <span class="price-list__item-value">Неограничено</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество уведомлений<br>(в месяц)</span>
+                                    <span class="price-list__item-value">50000</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Доступ к API</span>
+                                    <span class="price-list__item-value">Да</span>
+                                </div>
+                                <div class="price-list__item-row price-list__item-row_price">
+                                    <span class=price-list__item-price>Стоимость</span>
+                                    <span class="price-list__item-value price-list__item-value_price">4000 руб.</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <a href="https://my.push.express/login/registration" target="_blank">
+                                    <button class="price-list__button button"><span
+                                            class="button__span">Попробовать</span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-list__item">
+                            <div class="price-list__item-in">
+                                <div class="price-list__item-row">
+                                    <div class="price-list__item-main-title">Flexible</div>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Рекламные уведомления</span>
+                                    <span class="price-list__item-value">Нет</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество проектов</span>
+                                    <span class="price-list__item-value">Неограничено</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Количество уведомлений<br>(в месяц)</span>
+                                    <span class="price-list__item-value">Неограничено</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <span class=price-list__item-title>Доступ к API</span>
+                                    <span class="price-list__item-value">Да</span>
+                                </div>
+                                <div class="price-list__item-row price-list__item-row_price">
+                                    <span class=price-list__item-price>Стоимость</span>
+                                    <span class="price-list__item-value price-list__item-value_price">5 копеек</span>&nbsp;<span class="price-table__title-sm">(за уведомление)</span>
+                                </div>
+                                <div class="price-list__item-row">
+                                    <a href="https://my.push.express/login/registration" target="_blank">
+                                    <button class="price-list__button button"><span
+                                            class="button__span">Попробовать сейчас</span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-list__controls hide">
+                        <button class="price-list__controls-link price-list__controls-link_active"></button>
+                        <button class="price-list__controls-link"></button>
+                        <button class="price-list__controls-link"></button>
+                        <button class="price-list__controls-link"></button>
+                        <button class="price-list__controls-link"></button>
+                    </div>
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="price-list__item">
+                                    <div class="price-list__item-in">
+                                        <div class="price-list__item-row">
+                                            <div class="price-list__item-main-title">Старт</div>
+                                        </div>
+                                        <div class="price-list__item-row">
+                                            <span class=price-list__item-title>Рекламные увемдоления</span>
+                                            <span class="price-list__item-value">Да</span>
+                                        </div>
+                                        <div class="price-list__item-row">
+                                            <span class=price-list__item-title>Количество проектов</span>
+                                            <span class="price-list__item-value">1</span>
+                                        </div>
+                                        <div class="price-list__item-row">
+                                        <span class=price-list__item-title>Количество уведомлений<br>
+                                            (в месяц)</span>
+                                            <span class="price-list__item-value">5000</span>
+                                        </div>
+                                        <div class="price-list__item-row">
+                                        <span class=price-list__item-title>Доступ к API</span>
+                                            <span class="price-list__item-value">Нет</span>
+                                        </div>
+                                        <div class="price-list__item-row price-list__item-row_price">
+                                            <span class=price-list__item-price>Стоимость</span>
+                                            <span class="price-list__item-value price-list__item-value_price">Бесплатно</span>
+                                        </div>
+                                        <div class="price-list__item-row">
+                                            <a href="https://my.push.express/login/registration" target="_blank">
+                                            <button class="price-list__button button"><span
+                                                    class="button__span">Попробовать</span></button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="price-list__item">
+                                  <div class="price-list__item-in">
+                                      <div class="price-list__item-row">
+                                          <div class="price-list__item-main-title">Смарт</div>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Рекламные увемдоления</span>
+                                          <span class="price-list__item-value">Нет</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Количество проектов</span>
+                                          <span class="price-list__item-value">Неограничено</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Количество уведомлений<br>
+                                          (в месяц)</span>
+                                          <span class="price-list__item-value">10000</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Доступ к API</span>
+                                          <span class="price-list__item-value">Да</span>
+                                      </div>
+                                      <div class="price-list__item-row price-list__item-row_price">
+                                          <span class=price-list__item-price>Стоимость</span>
+                                          <span class="price-list__item-value price-list__item-value_price">1500 руб.</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <a href="https://my.push.express/login/registration" target="_blank">
+                                          <button class="price-list__button button"><span
+                                                  class="button__span">Попробовать</span></button>
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="price-list__item">
+                                  <div class="price-list__item-in">
+                                      <div class="price-list__item-row">
+                                          <div class="price-list__item-main-title">Смарт</div>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Рекламные увемдоления</span>
+                                          <span class="price-list__item-value">Да</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Количество проектов</span>
+                                          <span class="price-list__item-value">Неограничено</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Количество уведомлений<br>
+                                          (в месяц)</span>
+                                          <span class="price-list__item-value">50000</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Доступ к API</span>
+                                          <span class="price-list__item-value">Да</span>
+                                      </div>
+                                      <div class="price-list__item-row price-list__item-row_price">
+                                          <span class=price-list__item-price>Стоимость</span>
+                                          <span class="price-list__item-value price-list__item-value_price">4000 руб.</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <a href="https://my.push.express/login/registration" target="_blank">
+                                          <button class="price-list__button button"><span
+                                                  class="button__span">Попробовать</span></button>
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="price-list__item">
+                                  <div class="price-list__item-in">
+                                      <div class="price-list__item-row">
+                                          <div class="price-list__item-main-title">Flexible</div>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Рекламные увемдоления</span>
+                                          <span class="price-list__item-value">Нет</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <span class=price-list__item-title>Количество проектов</span>
+                                          <span class="price-list__item-value">Неограничено</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Количество уведомлений<br>
+                                          (в месяц)</span>
+                                          <span class="price-list__item-value">Неограничено</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                      <span class=price-list__item-title>Доступ к API</span>
+                                          <span class="price-list__item-value">Да</span>
+                                      </div>
+                                      <div class="price-list__item-row price-list__item-row_price">
+                                          <span class=price-list__item-price>Стоимость</span>
+                                          <span class="price-list__item-value price-list__item-value_price">5 копеек</span>&nbsp;<span class="price-table__title-sm">(за уведомление)</span>
+                                      </div>
+                                      <div class="price-list__item-row">
+                                          <a href="https://my.push.express/login/registration" target="_blank">
+                                          <button class="price-list__button button"><span
+                                                  class="button__span">Попробовать</span></button>
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-sixth" id="sixth-section">
+                <div class="section__content">
+                    <h2 class="section__title section__title_big">
+                        Свяжитесь с нами
+                    </h2>
+                    <div class="form-sent">
+                        <p class="section__description">Спасибо за сообщение. Мы свяжемся с Вами в ближайшее время</p>
+                        <p class="section__description">С благодарностью,
+                            <b>Команда PushExpress</b></p>
+                        <i class="section-third__icon"></i>
+                    </div>
+                    <div class="section__main-content">
+                        <form action="" class="form ">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Имя" name="name" id="name">
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Email" name="email" id="email">
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Телефон" name="phone" id="phone">
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Сообщение" name="message" id="message">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="button form__button button-submit">
+                                    <span class="button__span">Отправить</span>
+                                    <i class="icon-arrow"></i>
+                                </div>
+                            </div>
+                        </form>
+                        <i class="section-third__icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__in">
+            <div class="footer__links">
+                <a href="/about" class="footer__link">О проекте</a>
+                <span class="footer__separator">|</span>
+                <a href="/terms" class="footer__link">Пользовательское соглашение</a>
+            </div>
+            <div class="footer__share">
+                <a class="footer__share-link" href="">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+                <a class="footer__share-link" href="">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="footer__share-link" href="">
+                    <i class="fa fa-google"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
